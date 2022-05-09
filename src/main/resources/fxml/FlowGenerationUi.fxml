@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="625.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yu.tao.controller.fxml.FlowGenerationUiController">
+    <children>
+        <Pane layoutX="1.0" prefHeight="62.0" prefWidth="990.0" style="-fx-background-color: #F8F3FD">
+            <children>
+                <Label layoutX="380.0" layoutY="11.0" prefHeight="40.0" prefWidth="274.0" text="仿  真  流  量  生  成">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutY="63.0" prefHeight="391.0" prefWidth="990.0" style="-fx-background-color: #F3FDF0">
+            <children>
+                <JFXComboBox fx:id="comboBox1" focusColor="SANDYBROWN" layoutX="209.0" layoutY="32.0" prefHeight="29.0" prefWidth="106.0" promptText=" 协 议 类 型" style="-fx-font-size: 14px" unFocusColor="SANDYBROWN">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <Label>HTTP</Label>
+                            <Label>SMTP</Label>
+                            <Label>POP3</Label>
+                            <Label>IMAP</Label>
+                            <Label>SSH</Label>
+                            <Label>TELNET</Label>
+                        </FXCollections>
+                    </items>
+                </JFXComboBox>
+                <Label layoutX="209.0" layoutY="110.0" style="-fx-font-size: 14px" text="SOURCE_IP" />
+                <Label layoutX="210.0" layoutY="200.0" style="-fx-font-size: 14px" text="TARGET_IP" />
+                <TextField fx:id="textField1" layoutX="334.0" layoutY="95.0" prefHeight="48.0" prefWidth="323.0" />
+                <TextField fx:id="textField2" layoutX="334.0" layoutY="185.0" prefHeight="48.0" prefWidth="323.0" />
+                <TextField fx:id="textField3" layoutX="334.0" layoutY="275.0" prefHeight="48.0" prefWidth="323.0" />
+                <Label layoutX="212.0" layoutY="275.0" prefHeight="32.0" prefWidth="70.0" style="-fx-font-size: 14px" text="NUM" />
+                <JFXButton fx:id="button1" buttonType="FLAT" layoutX="737.0" layoutY="185.0" prefHeight="48.0" prefWidth="194.0" style="-fx-font-size: 14px; -fx-background-color: #FFCC66; -fx-background-radius: 25; -fx-border-radius: 25;" text="仿     真" />
+            </children>
+        </Pane>
+        <Pane layoutY="449.0" prefHeight="187.0" prefWidth="990.0" style="-fx-background-color: #FAEBD7">
+            <children>
+                <Label layoutX="202.0" layoutY="74.0" prefHeight="40.0" prefWidth="75.0" style="-fx-font-size: 14px" text="流量统计" />
+                <JFXButton fx:id="button3" buttonType="FLAT" layoutX="330.0" layoutY="48.0" prefHeight="91.0" prefWidth="97.0" style="-fx-font-size: 14px; -fx-background-color: #FFCC66; -fx-background-radius: 25; -fx-border-radius: 25;" text="饼状图" />
+                <JFXButton fx:id="button2" buttonType="FLAT" layoutX="557.0" layoutY="48.0" prefHeight="91.0" prefWidth="97.0" style="-fx-font-size: 14px; -fx-background-color: #FFCC66; -fx-background-radius: 25; -fx-border-radius: 25;" text="柱状图" />
+                <Label layoutX="821.0" layoutY="39.0" prefHeight="19.0" prefWidth="30.0" style="-fx-font-size: 14px" text="结果" />
+                <TextArea fx:id="textArea1" layoutX="739.0" layoutY="63.0" prefHeight="62.0" prefWidth="194.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

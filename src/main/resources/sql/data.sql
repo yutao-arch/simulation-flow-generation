@@ -1,0 +1,1 @@
+update flow_generation set num = 0 where id in(1,2,3,4,5,6)

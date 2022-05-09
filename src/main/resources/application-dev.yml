@@ -1,0 +1,28 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    username: root
+    password: yutao19981119
+    url: jdbc:mysql://localhost:3306/simulation_flow_generation?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:  # 执行项目之前执行数据库的初始化脚本
+    init:
+#      schema-locations: classpath*:/sql/schema.sql  # schema.sql中一般存放的是DDL脚本，即通常为创建或更新库表的脚本
+      data-locations: classpath*:/sql/data.sql  # data.sql中一般是DML脚本，即通常为数据插入脚本
+      mode: always
+
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+
+
+logging:
+#  level:
+#    root: info
+#    com.yu.tao: debug
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  file:
+    name: log/FlowGenerationResult.log
