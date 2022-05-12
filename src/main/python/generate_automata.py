@@ -75,10 +75,10 @@ def generate_automata(pcap_path, automata_path):
 
 
 if __name__ == '__main__':
-    generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\过滤后http.pcap',
-                      r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\automata\httpAutomata.txt')
-    # pcap_path = sys.argv[1]
-    # automata_path = sys.argv[2]
-    # generate_automata(pcap_path, automata_path)
+    # generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\过滤后http.pcap',
+    #                   r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\automata\httpAutomata.txt')
+    pcap_path = sys.argv[1]
+    automata_path = sys.argv[2]
+    generate_automata(pcap_path, automata_path)
 
 
