@@ -10,9 +10,23 @@ def generate_automata(pcap_path, automata_path):
     :return:
     """
     # scapy解析pcap一直报错，选择使用dpkt解析pcap
+    top = 'import sys\n' \
+          'from utils.send_packets import send_tcp_syn, send_tcp_synack, send_tcp_ack, send_tcp_pshack_data, send_tcp_ack_data, send_tcp_finack\n' \
+          '\n' \
+          '\n' \
+          'def simulate(source_ip, target_ip, source_port, target_port):\n'
+    completion = '    '
+    bottom = 'if __name__ == \'__main__\':\n' \
+             '    # simulate(\'101.132.158.80\', \'101.132.158.100\', 63315, 80)\n' \
+             '    source_ip = sys.argv[1]\n' \
+             '    target_ip = sys.argv[2]\n' \
+             '    source_port = sys.argv[3]\n' \
+             '    target_port = sys.argv[4]\n' \
+             '    simulate(source_ip, target_ip, int(source_port), int(target_port))'
     f = open(pcap_path, 'rb')
     pcap = dpkt.pcap.Reader(f)
     all_command = ''
+    all_command = all_command + top
     for ts, buf in pcap:
         protocol_map = {'syn': 2, 'synack': 18, 'ack': 16, 'pshack_data': 24, 'finack': 17}  # ack和ack_data后续再判断
         server_port_list = [80, 25, 110, 143, 22, 23]
@@ -51,8 +65,9 @@ def generate_automata(pcap_path, automata_path):
             command = command + ')'
         for method in method_list:  # 优化：去掉一些pacap中失败的包
             if method in command:
-                all_command = all_command + command + '\n'
+                all_command = all_command + completion + command + '\n'
                 break
+    all_command = all_command + '\n\n' + bottom
     # print(all_command)
     file = open(automata_path, 'w', encoding='UTF-8')
     file.write(all_command)
@@ -60,10 +75,10 @@ def generate_automata(pcap_path, automata_path):
 
 
 if __name__ == '__main__':
-    # generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\过滤后http.pcap',
-    #                   r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\automata\automata.txt')
-    pcap_path = sys.argv[1]
-    automata_path = sys.argv[2]
-    generate_automata(pcap_path, automata_path)
+    generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\过滤后http.pcap',
+                      r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\automata\httpAutomata.txt')
+    # pcap_path = sys.argv[1]
+    # automata_path = sys.argv[2]
+    # generate_automata(pcap_path, automata_path)
 
 
