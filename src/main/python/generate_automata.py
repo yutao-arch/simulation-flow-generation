@@ -17,7 +17,6 @@ def generate_automata(pcap_path, automata_path):
           'def simulate(source_ip, target_ip, source_port, target_port):\n'
     completion = '    '
     bottom = 'if __name__ == \'__main__\':\n' \
-             '    # simulate(\'101.132.158.80\', \'101.132.158.100\', 63315, 80)\n' \
              '    source_ip = sys.argv[1]\n' \
              '    target_ip = sys.argv[2]\n' \
              '    source_port = sys.argv[3]\n' \
@@ -75,7 +74,7 @@ def generate_automata(pcap_path, automata_path):
 
 
 if __name__ == '__main__':
-    # generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\过滤后http.pcap',
+    # generate_automata(r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\pcap\http.pcap',
     #                   r'C:\Users\10636\graduationDesign\simulation-flow-generation\src\main\python\automata\httpAutomata.txt')
     pcap_path = sys.argv[1]
     automata_path = sys.argv[2]

@@ -20,7 +20,6 @@ def simulate(source_ip, target_ip, source_port, target_port):
 
 
 if __name__ == '__main__':
-    # simulate('101.132.158.80', '101.132.158.100', 63315, 80)
     source_ip = sys.argv[1]
     target_ip = sys.argv[2]
     source_port = sys.argv[3]
