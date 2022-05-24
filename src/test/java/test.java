@@ -8,10 +8,10 @@ import java.util.concurrent.TimeUnit;
 public class test {
 
     public static void main(String[] args) {
-        ExecutorService threadPool =
-                new ThreadPoolExecutor(100, 200, 60L,
-                        TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
-
-        threadPool.submit(new CallPythonSimulate("Http.py", "101.132.158.80", "101.132.158.100", 5000, 80));
+//        ExecutorService threadPool =
+//                new ThreadPoolExecutor(100, 200, 60L,
+//                        TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
+//
+//        threadPool.submit(new CallPythonSimulate("Http.py", "101.132.158.80", "101.132.158.100", 5000, 80));
     }
 }

@@ -63,7 +63,7 @@ def generate_automata(pcap_path, automata_path):
             command = command + str(data) + ')'
         else:
             command = command + ')'
-        for method in method_list:  # 优化：去掉一些pacap中失败的包
+        for method in method_list:  # 优化：去掉一些pcap中失败的包
             if method in command:
                 all_command = all_command + completion + command + '\n'
                 break
