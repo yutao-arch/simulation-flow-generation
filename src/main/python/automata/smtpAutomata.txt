@@ -1,0 +1,42 @@
+import sys
+from utils.send_packets import send_tcp_syn, send_tcp_synack, send_tcp_ack, send_tcp_pshack_data, send_tcp_ack_data, send_tcp_finack
+
+
+def simulate(source_ip, target_ip, source_port, target_port):
+    send_tcp_syn(source_ip, target_ip, source_port, target_port, 10361911, 0)
+    send_tcp_synack(target_ip, source_ip, target_port, source_port, 2245208252, 10361912)
+    send_tcp_ack(source_ip, target_ip, source_port, target_port, 10361912, 2245208253)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208253, 10361912, b'220 newxmesmtplogicsvrszc6.qq.com XMail Esmtp QQ Mail Server.\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10361912, 2245208316, b'EHLO LAPTOP-OUDFRK43\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208316, 10361934)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208316, 10361934, b'250-newxmesmtplogicsvrszc6.qq.com\r\n250-PIPELINING\r\n250-SIZE 73400320\r\n250-STARTTLS\r\n250-AUTH LOGIN PLAIN XOAUTH XOAUTH2\r\n250-AUTH=LOGIN\r\n250-MAILCOMPRESS\r\n250 8BITMIME\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10361934, 2245208485, b'AUTH XOAUTH2 dXNlcj0xMDYzNjk1MzM0QHFxLmNvbQFhdXRoPUJlYXJlciBBQVRKSlk0RUFBQUJBQUFBQUFBYjFvNndWR2I2SkxuVUpmUXlZaUFBQUFCTk1SMk5OUXJjVENmOFFUV2NJTWg1cEtZejdpSVdTR3czUWlHMlNnK25EQ0VudWtQYjhjWERBRkd2anhmcEUrVmRCS1o3VlNhUTJSZ1h5aitGMmtFQS9hTFFva21zdDdUTy93ZkRIbzJXRVBqTnNzNHFuQkx0bGdOakpXYklRdEwvMGtjMndiVTRXcG9KK29BK0ZsVG5tZXJTTXk0U2R6SzdGMWpTL0s1cwEB\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208485, 10362281)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208485, 10362281, b'235 2.7.0 Accepted\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10362281, 2245208505, b'MAIL FROM: <1063695334@qq.com> SIZE=1042\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208505, 10362323)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208505, 10362323, b'250 OK\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10362323, 2245208513, b'RCPT TO: <3268130899@qq.com>\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208513, 10362353)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208513, 10362353, b'250 OK\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10362353, 2245208521, b'DATA\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208521, 10362359)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208521, 10362359, b'354 End data with <CR><LF>.<CR><LF>.\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10362359, 2245208559, b'Date: Thu, 17 Mar 2022 17:12:57 +0800\r\nFrom: "1063695334@qq.com" <1063695334@qq.com>\r\nTo: 3268130899 <3268130899@qq.com>\r\nSubject: theme\r\nX-Priority: 3\r\nX-GUID: D5B8E636-7962-45EA-97DD-3DF7455E0A90\r\nX-Has-Attach: no\r\nX-Mailer: Foxmail 7.2.23.116[cn]\r\nMime-Version: 1.0\r\nMessage-ID: <202203171712565875013@qq.com>\r\nContent-Type: multipart/alternative;\r\n\tboundary="----=_001_NextPart364880214656_=----"\r\n\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208559, 10362763)
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10362763, 2245208559, b'This is a multi-part message in MIME format.\r\n\r\n------=_001_NextPart364880214656_=----\r\nContent-Type: text/plain;\r\n\tcharset="us-ascii"\r\nContent-Transfer-Encoding: base64\r\n\r\nY29udGVudA==\r\n\r\n------=_001_NextPart364880214656_=----\r\nContent-Type: text/html;\r\n\tcharset="us-ascii"\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charse=\r\nt=3Dus-ascii"><style>body { line-height: 1.5; }body { font-size: 14px; fon=\r\nt-family: "Microsoft YaHei UI"; color: rgb(0, 0, 0); line-height: 1.5; }</=\r\nstyle></head><body>content</body></html>\r\n------=_001_NextPart364880214656_=------\r\n\r\n.\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208559, 10363406)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208559, 10363406, b'250 OK: queued as.\r\n')
+    send_tcp_pshack_data(source_ip, target_ip, source_port, target_port, 10363406, 2245208579, b'QUIT\r\n')
+    send_tcp_ack(target_ip, source_ip, target_port, source_port, 2245208579, 10363412)
+    send_tcp_pshack_data(target_ip, source_ip, target_port, source_port, 2245208579, 10363412, b'221 Bye.\r\n')
+    send_tcp_finack(target_ip, source_ip, target_port, source_port, 2245208589, 10363412)
+    send_tcp_ack(source_ip, target_ip, source_port, target_port, 10363412, 2245208590)
+
+
+if __name__ == '__main__':
+    source_ip = sys.argv[1]
+    target_ip = sys.argv[2]
+    source_port = sys.argv[3]
+    target_port = sys.argv[4]
+    simulate(source_ip, target_ip, int(source_port), int(target_port))
