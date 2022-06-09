@@ -1,31 +1,24 @@
-2022-06-01 15:21:12,820 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : Starting application using Java 1.8.0_271 on LAPTOP-OUDFRK43 with PID 5616 (started by 10636 in C:\Users\10636\graduationDesign\simulation-flow-generation)
-2022-06-01 15:21:12,827 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : The following 1 profile is active: "dev"
-2022-06-01 15:21:12,926 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-06-01 15:21:13,605 WARN  [ForkJoinPool.commonPool-worker-9] org.mybatis.spring.mapper.ClassPathMapperScanner : Skipping MapperFactoryBean with name 'flowGenerationMapper' and 'com.yu.tao.mapper.FlowGenerationMapper' mapperInterface. Bean already defined with the same name!
-2022-06-01 15:21:13,605 WARN  [ForkJoinPool.commonPool-worker-9] org.mybatis.spring.mapper.ClassPathMapperScanner : No MyBatis mapper was found in '[com.yu.tao.mapper]' package. Please check your configuration.
-2022-06-01 15:21:13,843 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-01 15:21:13,871 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
-2022-06-01 15:21:14,488 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 80 (http)
-2022-06-01 15:21:14,499 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-06-01 15:21:14,500 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-06-01 15:21:14,638 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
-2022-06-01 15:21:14,638 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1710 ms
-2022-06-01 15:21:14,733 INFO  [ForkJoinPool.commonPool-worker-9] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-06-01 15:21:14,906 INFO  [ForkJoinPool.commonPool-worker-9] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-06-01 15:21:15,044 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-01 15:21:15,110 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.Version : HHH000412: Hibernate ORM core version 5.6.5.Final
-2022-06-01 15:21:15,305 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-01 15:21:15,462 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2022-06-01 15:21:15,640 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-01 15:21:15,652 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-01 15:21:15,936 WARN  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-01 15:21:16,199 WARN  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-06-01 15:21:16,311 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 80 (http) with context path ''
-2022-06-01 15:21:16,322 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : Started application in 4.259 seconds (JVM running for 7.622)
-2022-06-01 15:21:53,877 INFO  [http-nio-80-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-01 15:21:53,877 INFO  [http-nio-80-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-06-01 15:21:53,877 INFO  [http-nio-80-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 0 ms
-2022-06-01 15:21:54,097 INFO  [http-nio-80-exec-1] com.yu.tao.controller.FlowGenerationController : [agreement: http] [sourceIp: 101.132.158.80] [targetIp: 101.132.158.100] [num: 10]
-2022-06-01 15:22:22,056 INFO  [http-nio-80-exec-2] com.yu.tao.controller.FlowGenerationController : [agreement: pop3] [sourceIp: 101.132.158.80] [targetIp: 101.132.158.100] [num: 10]
-2022-06-01 15:22:33,849 INFO  [http-nio-80-exec-7] com.yu.tao.controller.FlowGenerationController : visualization pie
-2022-06-01 15:22:36,436 INFO  [http-nio-80-exec-4] com.yu.tao.controller.FlowGenerationController : visualization bar
+2022-06-08 14:00:38,770 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : Starting application using Java 1.8.0_271 on LAPTOP-OUDFRK43 with PID 24764 (started by 10636 in C:\Users\10636\graduationDesign\simulation-flow-generation)
+2022-06-08 14:00:38,780 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : The following 1 profile is active: "dev"
+2022-06-08 14:00:38,929 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-08 14:00:39,581 WARN  [ForkJoinPool.commonPool-worker-9] org.mybatis.spring.mapper.ClassPathMapperScanner : Skipping MapperFactoryBean with name 'flowGenerationMapper' and 'com.yu.tao.mapper.FlowGenerationMapper' mapperInterface. Bean already defined with the same name!
+2022-06-08 14:00:39,582 WARN  [ForkJoinPool.commonPool-worker-9] org.mybatis.spring.mapper.ClassPathMapperScanner : No MyBatis mapper was found in '[com.yu.tao.mapper]' package. Please check your configuration.
+2022-06-08 14:00:39,819 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-08 14:00:39,847 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2022-06-08 14:00:40,438 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 80 (http)
+2022-06-08 14:00:40,449 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-06-08 14:00:40,450 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-08 14:00:40,592 INFO  [ForkJoinPool.commonPool-worker-9] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2022-06-08 14:00:40,592 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2022-06-08 14:00:40,692 INFO  [ForkJoinPool.commonPool-worker-9] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-06-08 14:00:40,862 INFO  [ForkJoinPool.commonPool-worker-9] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-06-08 14:00:41,007 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-08 14:00:41,071 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.Version : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-06-08 14:00:41,288 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-08 14:00:41,449 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-06-08 14:00:41,637 INFO  [ForkJoinPool.commonPool-worker-9] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-08 14:00:41,649 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-08 14:00:41,967 WARN  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-08 14:00:42,268 WARN  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-08 14:00:42,382 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 80 (http) with context path ''
+2022-06-08 14:00:42,393 INFO  [ForkJoinPool.commonPool-worker-9] org.springframework.boot.SpringApplication : Started application in 4.398 seconds (JVM running for 6.507)
